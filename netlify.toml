@@ -1,0 +1,29 @@
+[build]
+  # Executes your new build script
+  # command = "bash build.sh"
+  command = "bash -lc 'ZOLA_VERSION=0.21.2 \
+    && curl -sL https://github.com/getzola/zola/releases/download/v$ZOLA_VERSION/zola-v$ZOLA_VERSION-x86_64-unknown-linux-musl.tar.gz -o zola.tar.gz \
+    && tar -xzf zola.tar.gz \
+    && chmod +x zola \
+    && ./zola build'"
+
+  # Zola's default output directory is 'public'
+  publish = "public"
+
+[build.environment]
+  # Netlify automatically installs this version of Zola
+  ZOLA_VERSION = "0.21.0"
+
+  # Ensure the build environment uses your preferred timezone
+  TZ = "Asia/Jerusalem"
+
+[context.deploy-preview]
+  # For pull requests, override the base_url to the preview URL
+  # so links work correctly in the staging environment
+  command = "zola build --base-url $DEPLOY_PRIME_URL --minify"
+
+# Optional: Add caching for faster subsequent builds
+[[plugins]]
+  package = "netlify-plugin-cache"
+  [plugins.inputs]
+    paths = ["node_modules", ".cache"]
