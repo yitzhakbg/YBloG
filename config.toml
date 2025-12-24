@@ -1,0 +1,132 @@
+# The URL the site will be built for
+base_url = "https://YBloG.org.il"
+title = "YBG's Dreams"
+theme = "goyo"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+taxonomies = [
+    { name = "tags" },
+]
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+#
+# Put all your custom variables here
+[extra]
+# Footer Configuration
+footer_html = "Powered by <a href='https://www.getzola.org'>Zola</a> and <a href='https://github.com/hahwul/goyo'>Goyo</a>"  # Footer HTML content
+
+# Thumbnail Configuration
+default_thumbnail = "images/default_thumbnail.png"  # Default thumbnail image path
+
+# Google Tag Configuration
+gtag = ""  # Google Analytics tracking ID
+
+# Language display names for the language selector
+# If not defined, the language code will be displayed
+lang_aliases = { en = "English", ko = "한국어" }
+directions = { en = "ltr", he = "rtl" }
+
+# Navigation Configuration
+nav = [
+  # { name = "Documents", url = "/introduction", type = "url", icon = "fa-solid fa-book" },
+  # { name = "GitHub", url = "https://github.com/hahwul/goyo", type = "url", icon = "fa-brands fa-github" },
+  { name = "Writing", url = "/writing", type = "url", icon = "fa-solid fa-pen-nib" },
+  { name = "Links", type = "dropdown", icon = "fa-solid fa-link", members = [
+    { name = "Creator Blog", url = "https://www.hahwul.com", type = "url", icon = "fa-solid fa-fire-flame-curved" }
+  ] }
+]
+
+# Navigation Configuration (i18n / optional)
+# `nav_{lang}`: Language-specific navigation menu (e.g., `nav_he` for Hebrew).
+# If defined, it will be used instead of the default `nav` for that language.
+nav_he = [
+    # { name = "מסמכים", url = "/he/introduction", type = "url", icon = "fa-solid fa-book" },
+    # { name = "GitHub", url = "https://github.com/hahwul/goyo", type = "url", icon = "fa-brands fa-github" },
+  	{ name = "כתיבה", url = "/he/writing", type = "url", icon = "fa-solid fa-pen-nib" },
+    { name = "קישורים", type = "dropdown", icon = "fa-solid fa-link", members = [
+        { name = "בלוג של היוצר", url = "https://www.hahwul.com", type = "url", icon = "fa-solid fa-fire-flame-curved" },
+    ] },
+]
+
+# Edit URL Configuration
+edit_url = ""  # Base URL for editing pages (e.g., "https://github.com/user/repo/edit/main")
+
+# Logo Configuration (new structured format)
+# Supports theme-specific logos that change when toggling between dark/light themes
+[extra.logo]
+text = "Goyo"  # Text to display if no logo image
+image_path = "images/YBG_dreaming.png"  # Default logo image path
+# image_padding = "5px"  # Padding for logo image (optional)
+# dark_image_path = "images/goyo-dark.png"  # Logo for dark theme (optional override)
+# light_image_path = "images/goyo-light.png"  # Logo for light theme (optional override)
+
+# Legacy logo configuration (still supported for backward compatibility)
+# logo_text = "Goyo"
+# logo_image_path = "images/goyo.png"
+# logo_image_padding = "5px"
+
+# Twitter Configuration (new structured format)
+[extra.twitter]
+site = "@hahwul"  # Site Twitter handle
+creator = "@hahwul"  # Creator Twitter handle
+
+# Legacy Twitter configuration (still supported for backward compatibility)
+# twitter_site = "@hahwul"
+# twitter_creator = "@hahwul"
+
+# Theme Configuration (new structured format)
+[extra.theme]
+colorset = "dark"           # Default color scheme (dark/light)
+brightness = "normal"       # Common brightness: "darker", "normal", "lighter"
+# dark_brightness = "darker"  # Override brightness for dark theme (optional)
+# light_brightness = "normal" # Override brightness for light theme (optional)
+disable_toggle = false      # Hide theme toggle button
+
+# Legacy theme configuration (still supported for backward compatibility)
+# default_colorset = "dark"
+# brightness = "normal"
+# disable_theme_toggle = false
+
+# Font Configuration (new structured format)
+[extra.font]
+enabled = false  # Set to true to use custom font
+name = ""        # Name of the custom font (e.g., "Roboto", "Noto Sans KR")
+path = ""        # Local path (e.g., "fonts/custom.woff") or remote URL
+
+# Legacy font configuration (still supported for backward compatibility)
+# custom_font_enabled = false
+# custom_font_name = ""
+# custom_font_path = ""
+
+# Sidebar Configuration (new structured format)
+[extra.sidebar]
+expand_depth = 1         # Sidebar expansion depth (max 5)
+disable_root_hide = false # Prevent hiding sidebar on root page
+
+# Legacy sidebar configuration (still supported for backward compatibility)
+# sidebar_expand_depth = 1
+# disable_root_sidebar_hide = false
+
+# Share Buttons Configuration (new structured format)
+[extra.share]
+copy_url = false  # Copy URL button
+x = false         # Share on X button
+
+# Legacy share configuration (still supported for backward compatibility)
+# enable_copy_url = false
+# enable_share_x = false
+
+[extra.comments]
+enabled = false  # Enable comments
+system = ""  # Comment system (e.g., "giscus")
+repo = ""  # Repository for comments (e.g., "hahwul/goyo")
+repo_id = ""  # Repository ID (e.g., "R_kgDOXXXXXXX")
+category = ""  # Comment category (e.g., "General")
+category_id = ""  # Category ID (e.g., "DIC_kwDOXXXXXXXXXX")
