@@ -1,5 +1,8 @@
 name = "zola-worker"
 compatibility_date = "2025-08-15"
+# Specifies the build output directory for Cloudflare Pages
+# Zola builds to the 'public' directory by default
+pages_build_output_dir = "./public"
 
 routes = [
   { pattern = "YBloG.org.il", custom_domain = true },
