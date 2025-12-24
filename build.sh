@@ -1,30 +1,16 @@
 #!/usr/bin/env bash
 
-main() {
-  ZOLA_VERSION=0.21.0
+# Exit on error
+set -e
 
-  export TZ=Asia/Jerusalem
+# Set timezone as requested in your previous configuration
+export TZ=Asia/Jerusalem
 
-  # Install Zola if not already in PATH
-  if ! command -v zola &> /dev/null; then
-    echo "Installing Zola ${ZOLA_VERSION}..."
-    curl -sLJO "https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
-    mkdir "${HOME}/.local/zola"
-    tar -C "${HOME}/.local/zola" -xf "zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
-    rm "zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
-    export PATH="${HOME}/.local/zola:${PATH}"
-  else
-    echo "Zola already installed, skipping installation..."
-  fi
+echo "Current Timezone: $TZ"
+echo "Zola Version: $(zola --version)"
 
-  # Verify installations
-  echo "Verifying installations..."
-  echo Zola: "$(zola --version)"
+# Build the site using the native zola command
+# The --minify flag is used to optimize the output
+zola build --minify
 
-  # Build the site
-  echo "Building the site..."
-  ./.local/zola/zola build --output-dir --minify public
-}
-
-set -euo pipefail
-main "$@"
+echo "Build complete."
