@@ -23,7 +23,7 @@ main() {
 
   # Build the site
   echo "Building the site..."
-  ./zola build --output-dir --minify public
+  ./.local/zola/zola build --output-dir --minify public
 }
 
 set -euo pipefail
