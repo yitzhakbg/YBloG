@@ -3,7 +3,7 @@ compatibility_date = "2025-08-15"
 
 routes = [
   { pattern = "YBloG.org.il", custom_domain = true },
-  { pattern = "www.YBloG.org.il", custom", custom_domain = true }
+  { pattern = "www.YBloG.org.il", custom_domain = true }
 ]
 
 [build]
