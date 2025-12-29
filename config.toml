@@ -1,5 +1,6 @@
 # The URL the site will be built for
-base_url = "https://YBloG.org.il"
+base_url = "https://gleaming-moxie-c46f4b.netlify.app/"
+# base_url = "https://YBloG.org.il"
 title = "YBG's Dreams"
 theme = "goyo"
 
