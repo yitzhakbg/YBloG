@@ -1,6 +1,5 @@
 # The URL the site will be built for
-base_url = "https://luminous-cascaron-e853ea"
-# base_url = "https://YBloG.org.il"
+base_url = "https://YBloG.org.il"
 title = "YBG's Dreams"
 theme = "goyo"
 
@@ -31,8 +30,7 @@ gtag = ""  # Google Analytics tracking ID
 
 # Language display names for the language selector
 # If not defined, the language code will be displayed
-lang_aliases = { en = "English", ko = "한국어" }
-directions = { en = "ltr", he = "rtl" }
+# directions = { en = "ltr", he = "rtl" }
 
 # Navigation Configuration
 nav = [
@@ -56,6 +54,10 @@ nav_he = [
     ] },
 ]
 
+# Language Configuration
+[extra.lang]
+rtl = ["he"]  # List of RTL languages e.g. ["ar", "he"]
+aliases = { en = "English", he = "עברית" }  # Language display names for the language selector
 # Edit URL Configuration
 edit_url = ""  # Base URL for editing pages (e.g., "https://github.com/user/repo/edit/main")
 
