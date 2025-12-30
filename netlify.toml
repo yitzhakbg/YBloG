@@ -1,0 +1,8 @@
+[build]
+publish = "public"
+command = "zola build"
+
+[build.environment]
+# Specify the Zola version you want to use
+ZOLA_VERSION = "0.21.0" # Replace with your desired version
+
