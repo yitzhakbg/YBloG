@@ -1,5 +1,6 @@
 # The URL the site will be built for
-base_url = "https://YBloG.org.il"
+# base_url = "https://YBloG.org.il"
+base_url = "https://sunny-profiterole-3ec747"
 title = "YBG's Dreams"
 theme = "goyo"
 
