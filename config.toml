@@ -1,6 +1,6 @@
 # The URL the site will be built for
 # base_url = "https://YBloG.org.il"
-base_url = "https://yblog.org.il"
+base_url = "/"
 title = "YBG's Dreams"
 theme = "goyo"
 
