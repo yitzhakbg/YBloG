@@ -13,6 +13,9 @@ taxonomies = [
     { name = "tags" },
 ]
 
+[languages.he]
+generate_feeds = false
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
@@ -28,6 +31,9 @@ default_thumbnail = "images/default_thumbnail.png"  # Default thumbnail image pa
 
 # Google Tag Configuration
 gtag = ""  # Google Analytics tracking ID
+
+# Edit URL Configuration
+edit_url = ""  # Base URL for editing pages (e.g., "https://github.com/user/repo/edit/main")
 
 # Language display names for the language selector
 # If not defined, the language code will be displayed
@@ -59,15 +65,13 @@ nav_he = [
 [extra.lang]
 rtl = ["he"]  # List of RTL languages e.g. ["ar", "he"]
 aliases = { en = "English", he = "עברית" }  # Language display names for the language selector
-# Edit URL Configuration
-edit_url = ""  # Base URL for editing pages (e.g., "https://github.com/user/repo/edit/main")
 
 # Logo Configuration (new structured format)
 # Supports theme-specific logos that change when toggling between dark/light themes
 [extra.logo]
-text = "Goyo"  # Text to display if no logo image
+text = "YBloG"  # Text to display if no logo image
 image_path = "images/YBG_dreaming.png"  # Default logo image path
-# image_padding = "5px"  # Padding for logo image (optional)
+image_padding = "20px"  # Padding for logo image (optional)
 # dark_image_path = "images/goyo-dark.png"  # Logo for dark theme (optional override)
 # light_image_path = "images/goyo-light.png"  # Logo for light theme (optional override)
 
@@ -78,8 +82,8 @@ image_path = "images/YBG_dreaming.png"  # Default logo image path
 
 # Twitter Configuration (new structured format)
 [extra.twitter]
-site = "@hahwul"  # Site Twitter handle
-creator = "@hahwul"  # Creator Twitter handle
+site = ""  # Site Twitter handle
+creator = ""  # Creator Twitter handle
 
 # Legacy Twitter configuration (still supported for backward compatibility)
 # twitter_site = "@hahwul"
@@ -87,7 +91,7 @@ creator = "@hahwul"  # Creator Twitter handle
 
 # Theme Configuration (new structured format)
 [extra.theme]
-colorset = "dark"           # Default color scheme (dark/light)
+colorset = "light"           # Default color scheme (dark/light)
 brightness = "normal"       # Common brightness: "darker", "normal", "lighter"
 # dark_brightness = "darker"  # Override brightness for dark theme (optional)
 # light_brightness = "normal" # Override brightness for light theme (optional)
