@@ -11,7 +11,10 @@ ZOLA_VERSION = "0.21.0" # Replace with your desired version
 framework = "#custom"
 
 # 2. This command allows Netlify to run a preview server if needed
-command = "zola serve --interface 0.0.0.0 --port 8888"
+# command = "zola serve --interface 0.0.0.0 --port 8888"
+command = "zola serve --port 1111"
+# Tell Netlify to proxy the traffic from port 1111
+targetPort = 1111
 
 # 3. Match the port above
 port = 8888
